@@ -1,0 +1,19 @@
+/*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/
+.tablaContactos{
+    grid-area: tablaContactos;
+    width:22rem;
+}
+/*  estilo de la imagen donde esta el face,telefono y mail  de nosotros del HTML CONTACTANOS*/
+.imagen3{
+    grid-area: imagen3;
+    justify-self: center;
+    transform: scale(.7);
+    margin-top: 2rem;
+    margin-bottom:2rem ;
+}
+/* estilos del formulario que llenan los clientes en HTML CONTACTANOS */
+.formularioCliente{
+    margin: .5rem;
+    color: $color_principal;
+    font-weight: bold;   
+}

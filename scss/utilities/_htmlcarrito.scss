@@ -1,0 +1,24 @@
+/* ESTILOS DEL CARRITO CON BOOTSTRAT
+ */
+ .hdosCarrito{
+    color:$color_link;
+    text-align: center;
+    letter-spacing:  .3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.parrafoCarrito{
+    color:$color_link;
+    font-family: 'Signika Negative', sans-serif;
+}
+.tituloTrescarrito{
+    color:$color_principal;
+    font-family: 'Farsan', cursive;
+    font-weight: 1rem;
+   }
+/* estilo de la imagen del carrito de compras del HTML CARRITO */
+.carritodeCompras{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 10rem;
+    height: 10rem;
+}

@@ -1,0 +1,323 @@
+//scss//
+//import variables 
+@import "utilities/variables";
+
+/*reset*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* estilos del BODY, con el logo */
+body{
+    background-color:$color_fondo;
+    background-image: url(../img/Logogrande.png);
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: 40rem;
+}
+header{
+    /* estilos del logo para girar ANIMACIONES CAMBIE LA DURACION */
+    .girar{
+        margin-left: .8rem;
+        animation-name: girar;
+        animation-iteration-count: infinite;
+        animation-duration: 9s;
+    }
+    /* ANIMACIONES DE GIRAR EL LOGO CAMBIE LOS GRADOS */
+    @keyframes girar{
+        from{
+            transform: rotate(-17deg);
+        }
+        to{
+            transform: rotate(17deg);
+        }
+    }
+    /* estilos del TITULO PRINCIPAL EN TODAS LAS HTML */
+    .tituloPrincipal{
+        color:$color_titulo;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        font-family: 'Farsan', cursive;
+        font-weight: 1rem;
+        background-color:$color_principal;
+        padding: .3rem;
+    }
+    .menuPrincipal{
+        background-color:$color_dos;
+        margin-top:.2rem;
+        margin-bottom: 1rem;
+        .submenuPrincipal{
+            font-size: .9rem;
+            background-color:color_tres;
+            font-weight: bold;
+            color:$color_cinco;
+            padding: .3rem;
+            margin: 0.3rem;
+            border-bottom:  .2rem solid $color_cuatro;
+            border-right:  .2rem solid $color_cuatro;
+            border-radius: .5rem;
+            border-end-end-radius: .4rem;
+        }
+    }
+}
+@import "utilities/grids";
+@import "utilities/htmlproductos";
+@import "utilities/htmlquienes";
+@import "utilities/htmlcontactanos";
+@import "utilities/htmlcarrito";
+
+/* estilos del main subtitulos principales EN TODOS los HTML */
+main{
+    .hdosIndex{
+        grid-area: hdosIndex;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        color:$color_link;
+        text-decoration: underline;
+        text-transform: uppercase;
+        letter-spacing:  .3rem;
+        padding: .1rem;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+    /* estilos de los parrafos del main EN TODOS los HTML*/
+    .parrafoIndex{
+        grid-area: parrafoIndex;
+        color:$color_parrafo;
+        text-align:center;
+        font-family: 'Signika Negative', sans-serif;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        margin-left: 2.2rem;
+        margin-right: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    /* estilos deL otro subtitulo  EN TODOS los HTML */
+    .tituloTres{
+        grid-area: tituloTres;
+        color:$color_principal;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-family: 'Farsan', cursive;
+        font-weight: 1rem;
+        margin: 1rem;
+    }
+    /* estilos de primera imagen en el HTML INDEX Y HTML QUIENES SOMOS */
+    .imagen1{
+        grid-area: imagen1;
+        justify-self:center;
+        transform: scale(1.1);
+        margin-top: .8rem;
+    }
+    /* estilos de segunda imagen en el HTML INDEX Y HTML QUIENES SOMOS */
+    .imagen2{
+        grid-area: imagen2;
+        justify-self:center;
+        transform: scale(1.1);
+        margin-top: 4rem;
+        margin-bottom:2.3rem ;
+    }
+    /* pseudoclase hover para las imagenes 1 y dos de la pagina HTML y QUIENES SOMOS */
+    .imagen1:hover{
+        transform: scale(1.2);
+    }
+    .imagen2:hover{
+        transform: scale(1.2);
+    }
+
+}
+footer{
+        /* estilos del FOOTER es generico en TODOS LOS HTML*/
+    .piePagina{
+        color:$color_cuatro;
+        text-align: center;
+        font-size: 15px;
+    }
+    .faceMio{
+        text-align: center;
+    }
+    /* pseudo clases */
+    .linkEnlace:hover{
+        background-color:$color_dos;
+        font-weight: bold;
+    }
+    .linkEnlace:link{
+        color:$color_link;
+        background-color:$color_titulo;
+        font-weight: bold;
+    }
+    .linkEnlace:visited{
+        color:$color_link;
+        font-weight: bold;
+    }
+    .linkEnlace:active{
+        color:$color_cuatro;
+    }
+}
+
+
+
+/* para pantallas superiores a 635px uso de queries, pongo el comentario de abajo para que sirva de separador en lo que me acostumbro */
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px-- */
+@media screen and (min-width:635px) {
+    /* grid del html index */
+    .mainIndex{
+        grid-template-areas: "hdosIndex hdosIndex"
+                             "parrafoIndex parrafoIndex"
+                             "imagen1 imagen2";
+    }
+    .mainQuienes{
+        grid-template-areas: "hdosIndex hdosIndex "
+                            "parrafoIndex parrafoIndex "
+                            "tituloTres tituloTres"
+                            "imagen1 imagen2 "
+                            "nombre1 nombre2"
+                            "descripcionIntegrante descripcionIntegrante" ;
+    }
+     /* grid del html PRODUCTOS*/
+    .contenedorProductos{
+        grid-template-areas: "producto1 producto2 producto3 "
+                             "producto4 producto5 producto6 "
+                             "producto7 producto8 producto9"
+                             "producto10 producto11 producto12 "
+                             "producto13 producto14 producto15 "
+                             "producto16 producto16 producto16 ";
+    }
+
+
+    /* estilos del HEADER */
+    header{
+        .tituloPrincipal{
+            font-size: 2rem;
+            padding: .8rem;
+       } 
+        /* estilos del MENU */
+        nav ul li{
+            font-size: 1rem;
+        }
+    }
+    main{
+
+        .hdosIndex{
+            letter-spacing:  .2rem;
+            font-size: 2rem;
+        }
+        .parrafoIndex{
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+        .imagen1{
+            margin-left: .8rem;
+            justify-self:left;
+            transform: scale(.9);
+            margin-bottom:4rem ;
+        }
+        .imagen2{
+            margin-right: .8rem;
+            justify-self:right;
+            transform: scale(.9);
+            margin-bottom:4rem ;
+            margin-top: .8rem;
+        }
+        /* pseudoclase hover para las imagenes 1 y dos de la pagina HTML y QUIENES SOMOS */
+        .imagen1:hover{
+            transform: scale(1.05);
+        }
+        .imagen2:hover{
+            transform: scale(1.05);
+        }
+        .nombre1{
+            justify-self: left;
+            font-size: 1.5rem;
+    
+        }
+        .nombre2{
+            justify-self: right;
+            font-size: 1.5rem;
+        }
+        .descripcionIntegrante{
+            width: 35rem;
+            height: 8rem;
+            font-size:1.2rem ;
+        }
+        .tituloTres{
+            font-size: 2.6rem;
+        }
+        /*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/
+        .tablaContactos{
+            width:30rem;
+        }
+    
+    }
+}
+/* TERMINA mi primer query &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/* mayor 1024px-- mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px-- */
+/* uso de media query  */
+@media screen and (min-width:1024px) {
+    /* grid del html CONTACTANOS*/
+    .mainContactanos{
+        grid-template-areas: "hdosIndex hdosIndex"
+                             "parrafoIndex parrafoIndex "
+                             "tituloTres tituloTres"
+                             "tablaContactos imagen3";
+    }
+    /* grid del html PRODUCTOS*/
+    .contenedorProductos{
+        grid-template-areas: "producto1 producto2 producto3 producto4"
+                             "producto5 producto6 producto7 producto8"
+                             "producto9 producto10 producto11 producto12 "
+                             "producto13 producto14 producto15 producto16";
+    }
+
+    header{
+        /* estilos del HEADER */
+        .tituloPrincipal{
+            font-size: 3.5rem;
+            padding: 2rem;
+        }
+        /* estilos del MENU */
+        nav ul{
+            display: flex;
+            justify-content:right;
+        }
+    }
+   main{
+        .hdosIndex{
+            font-size: 2.3rem;
+        }
+        .parrafoIndex{
+            line-height: 2rem;
+            font-size: 1.4rem;
+            margin-left: 12rem;
+            margin-right: 12rem;
+        }
+        .imagen1{
+            margin-left: 3rem;
+            transform: rotate(13deg);
+        }
+        .imagen2{
+            margin-right: 3rem;
+            transform: rotate(-13deg);
+        }
+        .tituloTres{
+            font-size: 3rem;
+        }
+        /*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/
+        .tablaContactos{
+            margin-left: 6rem;
+            width:35rem;
+        }
+
+   }
+}
+/*  TERMINA mi segundo query &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+ 

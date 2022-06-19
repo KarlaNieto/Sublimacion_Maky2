@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link de tipografia de google font del titulo principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Farsan&display=swap" rel="stylesheet">
+
+    <!-- tipografia del primer párrafo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+ 
+    <!-- link de animaciones de la página web  https://animate.style/-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     
+    <!-- link de mi css -->
+    <link rel="stylesheet" href="../css/styles.css">   
+
+    <title>Productos</title>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div class="row">
+              <img class="col-2 girar" src="../img/Logochico.png" alt="logo de la pagina" >
+              <h1 class="tituloPrincipal col animate__animated animate__pulse" id="inicio">Sublimaciones MAKY </h1>
+            </div>
+            <nav class=" menuPrincipal navbar navbar-expand-lg ">
+              <div class="container-fluid ">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ">
+                    <li class="nav-item submenuPrincipal">
+                      <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item submenuPrincipal">
+                      <a class="nav-link active" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item submenuPrincipal">
+                      <a class="nav-link" href="carrito.html">Carrito</a>
+                    </li>
+                    <li class="nav-item submenuPrincipal">
+                      <a class="nav-link" href="quienessomos.html">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item submenuPrincipal">
+                      <a class="nav-link" href="contactanos.html">Contáctanos</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+    </header>
+
+    <!-- Cuerpo o contenido principal-->
+    <main>
+        <h2 class="hdosIndex">Productos Sublimados</h2>
+        <p class="parrafoIndex">
+            En esta sección encontrarás nuestra variedad de productos  y la lista de precios, desde una taza con tu superheroe favorito, una playera o llavero, o si requieres un detalle personalizado selecciona el artículo de forma genérica y contáctanos, para que nos mandes tu foto y lograr el regalo perfecto.  
+        </p>
+        <h3 class="tituloTres"> Selecciona  los artículos </h3>
+
+        <form  class="seleccionProducto" action="">
+            <fieldset >
+            <legend >Aquí podras filtrar por tipo de producto </legend>
+                <div>
+                    <label for="productos">
+                        Producto:  
+                    </label>
+                    <select name="productos" id="">
+                        <option value="todos"> Todos los productos</option>
+                        <option value="tazasbl"> Tazas Blancas</option>
+                        <option value="tazascl">Tazas de Color</option>
+                        <option value="playeras"> Playeras</option>
+                        <option value="llaveros"> Llaveros</option>
+                        <option value="aluminio"> Aluminio</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="contenedorProductos">
+            <div class="producto1">
+                <img src="../img/producto1.png" alt=" taza spiderman">
+                <p>Precio=$100</p>
+            </div>
+            <div class="producto2">
+                <img src="../img/producto2.png" alt="taza carlitos">
+                <p>Precio=$100</p>
+            </div>
+            <div class="producto3">
+                <img src="../img/producto3.png" alt="taza jurassic park">
+                <p>Precio=$100</p>
+            </div>
+           <div class="producto4">
+                <img src="../img/producto4.png" alt="taza de amor y amistad">
+                <p>Precio=$100</p>
+           </div>
+            <div class="producto5">
+                <img src="../img/producto5.png" alt="taza mickey mouse">
+                <p>Precio=$100</p>
+            </div>
+            <div class="producto6">
+                <img src="../img/producto6.png" alt="taza superheroe">
+                <p>Precio=$80</p>
+            </div>
+            <div class="producto7">
+                <img src="../img/producto7.png" alt="taza Frida Kahlo">
+                <p>Precio=$80</p>
+            </div>
+            <div class="producto8">
+                <img src="../img/producto8.jpg" alt="taza simpsom">
+                <p>Precio=$80</p>
+            </div>
+             <div class="producto9">
+                <img  src="../img/producto9.png" alt="playera sublimada">
+                <p>Precio=$100</p>
+            </div>
+            <div class="producto10">
+                <img  src="../img/producto10.png" alt="dos playeras de mickey mouse pareja">
+                <p>Precio=$200</p>
+            </div>
+            <div class="producto11">
+                <img  src="../img/producto11.png" alt="dos tazas de mickey mouse pareja">
+                <p>Precio=$150</p>
+            </div>
+            <div class="producto12">
+                <img src="../img/producto12.jpg" alt="playera spideran">
+                <p>Precio=$100</p>
+            </div>
+            <div class="producto13">
+                <img src="../img/producto13.png" alt="taza para personalizar ">
+                <p>Precio=$120</p>
+            </div>
+            <div class="producto14">
+                <img src="../img/producto14.png" alt="llavero para personalizar">
+                <p>Precio=$80</p>
+            </div>
+            <div class="producto15">
+                <img src="../img/producto15.png" alt="alumnio para personalizar">
+                <p>Precio=$150</p>
+            </div>
+            <div class="producto16">
+                <img src="../img/producto16.png" alt="playera para personalizar">
+                <p>Precio=$150</p>
+            </div> 
+        </div>
+        
+        <section class="ListadoPrecios">
+            <table>
+                <tr>
+                    <td class="letraTabla">Productos Personalizados </td>
+                    <td class="letraTabla">Precio </td>
+                </tr>
+                <tr>
+                    <td>Taza Blanca </td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Taza fondo de Color </td>
+                    <td>$120</td>
+                </tr>
+                <tr>
+                    <td>Playera Adulto </td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Playera Niño </td>
+                    <td>$120</td>
+                </tr>
+                <tr>
+                    <td>Llavero </td>
+                    <td>$80</td>
+                </tr>
+                <tr>
+                    <td>Placa de Aluminio </td>
+                    <td>$150</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+      
+    <!-- Pie de página -->
+    <footer>
+        <h3 class="piePagina"> Derechos reservados </h3>
+        <h4 class="piePagina"> Búscanos en nuestras redes sociales</h4>
+        <div class="faceMio">
+            <!-- puse la pagina de coder ya que aun no cuento con la pagina de facebook de la empresa, solo para ejemplificar los enlaces absolutos -->
+           <a class="linkEnlace" href="https://www.coderhouse.com" target="_blank">
+           Facebook 
+           </a>
+       </div>
+       <div>
+            <a class="linkEnlace" href="#inicio">
+                Ir Arriba
+            </a>
+        </div>
+    </footer>
+  
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

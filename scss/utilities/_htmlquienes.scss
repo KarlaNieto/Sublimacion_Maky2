@@ -1,0 +1,41 @@
+/* estilos del primer nombre del HTML QUIENES SOMOS */
+.nombre1{
+    grid-area: nombre1;
+    color:$color_titulo;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Farsan', cursive;
+    font-weight: 1rem;
+    background-color:$color_principal;
+    margin: 2rem; 
+}
+/* estilos del segundo nombre del HTML QUIENES SOMOS */
+.nombre2{
+    grid-area: nombre2;
+    color:$color_titulo;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Farsan', cursive;
+    font-weight: 1rem;
+    background-color:$color_principal;
+    margin-bottom: 2rem;
+}
+/* estilos de la descripcion del HTML QUIENES SOMOS  */
+.descripcionIntegrante{
+    grid-area: descripcionIntegrante;
+    color:rgb(165, 40, 47);
+    font-size:1rem ;
+    text-align: justify;
+    background-color: rgb(206, 236, 235);
+    width: 20rem;
+    height: 6rem;
+    border: 1px solid $color_cuatro;
+    overflow: auto;
+    margin-bottom: 3rem;
+}
+/* estilos del nombre en negrita para la descripcion del HTML QUIENES SOMOS*/
+.nombrePropio{
+    font-weight: bold;
+}

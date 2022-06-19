@@ -1,0 +1,55 @@
+
+/* GRID INDEX******************************************************************************************************/
+.mainIndex{
+    display: grid;
+    grid-template-areas: "hdosIndex "
+                         "parrafoIndex "
+                         "imagen1 "
+                         "imagen2";
+    justify-content: center;
+    justify-items: center;
+}
+/*GRID QUIENES SOMOS**********************************************************************************************/
+.mainQuienes{
+    display: grid;
+    grid-template-areas: "hdosIndex "
+                         "parrafoIndex "
+                         "tituloTres"
+                         "imagen1 "
+                         "nombre1"
+                         "imagen2"
+                         "nombre2"
+                         "descripcionIntegrante";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+/*GRID CONTACTANOS*************************************************************************************************/
+.mainContactanos{
+    display: grid;
+    grid-template-areas: "hdosIndex "
+                         "parrafoIndex "
+                         "tituloTres"
+                         "tablaContactos"
+                         "imagen3";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+/*GRID PRODUCTOS***************************************************************************************************/
+.contenedorProductos{
+    display: grid;
+    grid-template-areas: "producto1 producto2 "
+                         "producto3 producto4 "
+                         "producto5 producto6 "
+                         "producto7 producto8 "
+                         "producto9 producto10"
+                         "producto11 producto12 "
+                         "producto13 producto14 "
+                         "producto15 producto16 ";
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+ }
+ /* FIN DE GRIDS***************************************************************************************************/
