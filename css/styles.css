@@ -13,6 +13,7 @@ body {
   background-position-y: center;
   background-size: 40rem; }
 
+/* estilos HEADER */
 header {
   /* estilos del logo para girar ANIMACIONES CAMBIE LA DURACION */
   /* ANIMACIONES DE GIRAR EL LOGO CAMBIE LOS GRADOS */
@@ -53,6 +54,7 @@ header {
       border-radius: .5rem;
       border-end-end-radius: .4rem; }
 
+/* imports de las paginas html*/
 /* GRID INDEX******************************************************************************************************/
 .mainIndex {
   display: grid;
@@ -371,8 +373,8 @@ main {
   main .imagen2:hover {
     transform: scale(1.2); }
 
+/* estilos del FOOTER es generico en TODOS LOS HTML*/
 footer {
-  /* estilos del FOOTER es generico en TODOS LOS HTML*/
   /* pseudo clases */ }
   footer .piePagina {
     color: black;
@@ -395,14 +397,12 @@ footer {
 
 /* para pantallas superiores a 635px uso de queries, pongo el comentario de abajo para que sirva de separador en lo que me acostumbro */
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-/* mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px-- */
 @media screen and (min-width: 635px) {
-  /* grid del html index */
+  /* grids */
   .mainIndex {
     grid-template-areas: "hdosIndex hdosIndex" "parrafoIndex parrafoIndex" "imagen1 imagen2"; }
   .mainQuienes {
     grid-template-areas: "hdosIndex hdosIndex " "parrafoIndex parrafoIndex " "tituloTres tituloTres" "imagen1 imagen2 " "nombre1 nombre2" "descripcionIntegrante descripcionIntegrante"; }
-  /* grid del html PRODUCTOS*/
   .contenedorProductos {
     grid-template-areas: "producto1 producto2 producto3 " "producto4 producto5 producto6 " "producto7 producto8 producto9" "producto10 producto11 producto12 " "producto13 producto14 producto15 " "producto16 producto16 producto16 "; }
   /* estilos del HEADER */
@@ -413,6 +413,7 @@ footer {
       padding: .8rem; }
     header nav ul li {
       font-size: 1rem; }
+  /* estilos del MAIN */
   main {
     /* pseudoclase hover para las imagenes 1 y dos de la pagina HTML y QUIENES SOMOS */
     /*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/ }
@@ -454,18 +455,16 @@ footer {
     main .tablaContactos {
       width: 30rem; } }
 
-/* TERMINA mi primer query &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 /* mayor 1024px-- mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px-- */
 /* uso de media query  */
 @media screen and (min-width: 1024px) {
-  /* grid del html CONTACTANOS*/
+  /* gridS*/
   .mainContactanos {
     grid-template-areas: "hdosIndex hdosIndex" "parrafoIndex parrafoIndex " "tituloTres tituloTres" "tablaContactos imagen3"; }
-  /* grid del html PRODUCTOS*/
   .contenedorProductos {
     grid-template-areas: "producto1 producto2 producto3 producto4" "producto5 producto6 producto7 producto8" "producto9 producto10 producto11 producto12 " "producto13 producto14 producto15 producto16"; }
+  /* estilos del HEADER */
   header {
-    /* estilos del HEADER */
     /* estilos del MENU */ }
     header .tituloPrincipal {
       font-size: 3.5rem;
@@ -473,25 +472,22 @@ footer {
     header nav ul {
       display: flex;
       justify-content: right; }
-  main {
-    /*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/ }
-    main .hdosIndex {
-      font-size: 2.3rem; }
-    main .parrafoIndex {
-      line-height: 2rem;
-      font-size: 1.4rem;
-      margin-left: 12rem;
-      margin-right: 12rem; }
-    main .imagen1 {
-      margin-left: 3rem;
-      transform: rotate(13deg); }
-    main .imagen2 {
-      margin-right: 3rem;
-      transform: rotate(-13deg); }
-    main .tituloTres {
-      font-size: 3rem; }
-    main .tablaContactos {
-      margin-left: 6rem;
-      width: 35rem; } }
-
-/*  TERMINA mi segundo query &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+  /* estilos del MAIN */
+  main .hdosIndex {
+    font-size: 2.3rem; }
+  main .parrafoIndex {
+    line-height: 2rem;
+    font-size: 1.4rem;
+    margin-left: 12rem;
+    margin-right: 12rem; }
+  main .imagen1 {
+    margin-left: 3rem;
+    transform: rotate(13deg); }
+  main .imagen2 {
+    margin-right: 3rem;
+    transform: rotate(-13deg); }
+  main .tituloTres {
+    font-size: 3rem; }
+  main .tablaContactos {
+    margin-left: 6rem;
+    width: 35rem; } }

@@ -17,6 +17,7 @@ body{
     background-position-y:center;
     background-size: 40rem;
 }
+/* estilos HEADER */
 header{
     /* estilos del logo para girar ANIMACIONES CAMBIE LA DURACION */
     .girar{
@@ -63,6 +64,7 @@ header{
         }
     }
 }
+/* imports de las paginas html*/ 
 @import "utilities/grids";
 @import "utilities/htmlproductos";
 @import "utilities/htmlquienes";
@@ -130,8 +132,8 @@ main{
     }
 
 }
+ /* estilos del FOOTER es generico en TODOS LOS HTML*/
 footer{
-        /* estilos del FOOTER es generico en TODOS LOS HTML*/
     .piePagina{
         color:$color_cuatro;
         text-align: center;
@@ -159,13 +161,10 @@ footer{
     }
 }
 
-
-
 /* para pantallas superiores a 635px uso de queries, pongo el comentario de abajo para que sirva de separador en lo que me acostumbro */
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-/* mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px--mayor 635px-- */
 @media screen and (min-width:635px) {
-    /* grid del html index */
+    /* grids */
     .mainIndex{
         grid-template-areas: "hdosIndex hdosIndex"
                              "parrafoIndex parrafoIndex"
@@ -179,7 +178,6 @@ footer{
                             "nombre1 nombre2"
                             "descripcionIntegrante descripcionIntegrante" ;
     }
-     /* grid del html PRODUCTOS*/
     .contenedorProductos{
         grid-template-areas: "producto1 producto2 producto3 "
                              "producto4 producto5 producto6 "
@@ -188,9 +186,7 @@ footer{
                              "producto13 producto14 producto15 "
                              "producto16 producto16 producto16 ";
     }
-
-
-    /* estilos del HEADER */
+   /* estilos del HEADER */
     header{
         .tituloPrincipal{
             font-size: 2rem;
@@ -201,8 +197,8 @@ footer{
             font-size: 1rem;
         }
     }
+   /* estilos del MAIN */
     main{
-
         .hdosIndex{
             letter-spacing:  .2rem;
             font-size: 2rem;
@@ -236,7 +232,6 @@ footer{
         .nombre1{
             justify-self: left;
             font-size: 1.5rem;
-    
         }
         .nombre2{
             justify-self: right;
@@ -254,31 +249,26 @@ footer{
         .tablaContactos{
             width:30rem;
         }
-    
     }
 }
-/* TERMINA mi primer query &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-
 /* mayor 1024px-- mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px-- */
 /* uso de media query  */
 @media screen and (min-width:1024px) {
-    /* grid del html CONTACTANOS*/
+    /* gridS*/
     .mainContactanos{
         grid-template-areas: "hdosIndex hdosIndex"
                              "parrafoIndex parrafoIndex "
                              "tituloTres tituloTres"
                              "tablaContactos imagen3";
     }
-    /* grid del html PRODUCTOS*/
     .contenedorProductos{
         grid-template-areas: "producto1 producto2 producto3 producto4"
                              "producto5 producto6 producto7 producto8"
                              "producto9 producto10 producto11 producto12 "
                              "producto13 producto14 producto15 producto16";
     }
-
+    /* estilos del HEADER */
     header{
-        /* estilos del HEADER */
         .tituloPrincipal{
             font-size: 3.5rem;
             padding: 2rem;
@@ -289,7 +279,8 @@ footer{
             justify-content:right;
         }
     }
-   main{
+     /* estilos del MAIN */
+    main{
         .hdosIndex{
             font-size: 2.3rem;
         }
@@ -310,14 +301,12 @@ footer{
         .tituloTres{
             font-size: 3rem;
         }
-        /*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/
         .tablaContactos{
             margin-left: 6rem;
             width:35rem;
         }
-
    }
 }
-/*  TERMINA mi segundo query &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
 
  
