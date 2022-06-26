@@ -19,7 +19,7 @@
 
 /*extend en pagina html quienes somos*/
 %extnombres{
-    @include fuentesTam(.8rem,bold ,$color_principal)
+    @include fuentesTam(.8rem,bold ,$color_principal);
     color:$color_titulo;
     text-align: center;
     text-transform: uppercase;

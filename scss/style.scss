@@ -89,7 +89,7 @@ main{
         grid-area: parrafoIndex;
         @include propiedadesFlex;
         @include fuentesTam(1.05rem,lighter,rgb(252, 223, 229));
-        @include fuentesParrafo(1.2rem,1.05rem ,2.2rem ,2.2rem )
+        @include fuentesParrafo(1.2rem,1.05rem ,2.2rem ,2.2rem );
         color:$color_parrafo;
         font-family: 'Signika Negative', sans-serif;
         margin-bottom: 1.5rem;
