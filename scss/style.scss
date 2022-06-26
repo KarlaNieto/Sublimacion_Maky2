@@ -1,6 +1,8 @@
 //scss//
 //import variables 
 @import "utilities/variables";
+//import de misxin y extend
+@import "utilities/mixinyextend";
 
 /*reset*/
 *{
@@ -13,9 +15,9 @@ body{
     background-color:$color_fondo;
     background-image: url(../img/Logogrande.png);
     background-repeat: no-repeat;
-    background-position-x:center;
+    background-position-x: center;
     background-position-y:center;
-    background-size: 40rem;
+    background-size: 38rem; 
 }
 /* estilos HEADER */
 header{
@@ -37,13 +39,11 @@ header{
     }
     /* estilos del TITULO PRINCIPAL EN TODAS LAS HTML */
     .tituloPrincipal{
+        @include propiedadesFlex;
+        @include fuentesTam(1.7rem,bold,$color_principal);         
         color:$color_titulo;
-        text-align: center;
         text-transform: uppercase;
-        font-size: 1.7rem;
         font-family: 'Farsan', cursive;
-        font-weight: 1rem;
-        background-color:$color_principal;
         padding: .3rem;
     }
     .menuPrincipal{
@@ -51,9 +51,7 @@ header{
         margin-top:.2rem;
         margin-bottom: 1rem;
         .submenuPrincipal{
-            font-size: .9rem;
-            background-color:color_tres;
-            font-weight: bold;
+            @include fuentesTam(.9rem,bold,$color_tres); 
             color:$color_cinco;
             padding: .3rem;
             margin: 0.3rem;
@@ -75,37 +73,35 @@ header{
 main{
     .hdosIndex{
         grid-area: hdosIndex;
+        @include propiedadesFlex;
+        @include fuentesTam(1.5rem,bold,$color_fondo); 
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-align: center;
         color:$color_link;
         text-decoration: underline;
         text-transform: uppercase;
         letter-spacing:  .3rem;
         padding: .1rem;
         margin: 1rem;
-        font-size: 1.5rem;
+        
     }
     /* estilos de los parrafos del main EN TODOS los HTML*/
     .parrafoIndex{
         grid-area: parrafoIndex;
+        @include propiedadesFlex;
+        @include fuentesTam(1.05rem,lighter,rgb(252, 223, 229));
+        @include fuentesParrafo(1.2rem,1.05rem ,2.2rem ,2.2rem )
         color:$color_parrafo;
-        text-align:center;
         font-family: 'Signika Negative', sans-serif;
-        line-height: 1.2rem;
-        font-size: 1rem;
-        margin-left: 2.2rem;
-        margin-right: 2.2rem;
         margin-bottom: 1.5rem;
     }
     /* estilos deL otro subtitulo  EN TODOS los HTML */
     .tituloTres{
+        @include propiedadesFlex;
+        @include fuentesTam(1.3rem,bold,$color_fondo);
         grid-area: tituloTres;
         color:$color_principal;
-        text-align: center;
         text-transform: uppercase;
-        font-size: 2rem;
         font-family: 'Farsan', cursive;
-        font-weight: 1rem;
         margin: 1rem;
     }
     /* estilos de primera imagen en el HTML INDEX Y HTML QUIENES SOMOS */
@@ -135,9 +131,9 @@ main{
  /* estilos del FOOTER es generico en TODOS LOS HTML*/
 footer{
     .piePagina{
+        @include propiedadesFlex;
+        @include fuentesTam(1rem,bold,$color_fondo);
         color:$color_cuatro;
-        text-align: center;
-        font-size: 15px;
     }
     .faceMio{
         text-align: center;
@@ -174,9 +170,9 @@ footer{
         grid-template-areas: "hdosIndex hdosIndex "
                             "parrafoIndex parrafoIndex "
                             "tituloTres tituloTres"
-                            "imagen1 imagen2 "
+                            "imagenAle imagenKarla "
                             "nombre1 nombre2"
-                            "descripcionIntegrante descripcionIntegrante" ;
+                            "descripcionIntegrante1  descripcionIntegrante2" ;
     }
     .contenedorProductos{
         grid-template-areas: "producto1 producto2 producto3 "
@@ -204,10 +200,7 @@ footer{
             font-size: 2rem;
         }
         .parrafoIndex{
-            font-size: 1.5rem;
-            line-height: 1.8rem;
-            margin-left: 4rem;
-            margin-right: 4rem;
+            @include fuentesParrafo(1.8rem,1.25rem ,4rem ,4rem )
         }
         .imagen1{
             margin-left: .8rem;
@@ -222,6 +215,13 @@ footer{
             margin-bottom:4rem ;
             margin-top: .8rem;
         }
+        .imagenAle{
+            @include imagenquienes2;
+        }
+        .imagenKarla{
+            @include imagenquienes2;
+        }
+
         /* pseudoclase hover para las imagenes 1 y dos de la pagina HTML y QUIENES SOMOS */
         .imagen1:hover{
             transform: scale(1.05);
@@ -229,18 +229,25 @@ footer{
         .imagen2:hover{
             transform: scale(1.05);
         }
+        .imagenAle:hover{
+            transform: scale(1.1);
+        }
+        .imagenKarla:hover{
+            transform: scale(1.1);
+        }
         .nombre1{
-            justify-self: left;
+            justify-self: center;
             font-size: 1.5rem;
         }
         .nombre2{
-            justify-self: right;
+            justify-self: center;
             font-size: 1.5rem;
         }
-        .descripcionIntegrante{
-            width: 35rem;
-            height: 8rem;
-            font-size:1.2rem ;
+        .descripcionIntegrante1{
+            @include descint2;
+        }
+        .descripcionIntegrante2{
+            @include descint2;
         }
         .tituloTres{
             font-size: 2.6rem;
@@ -285,10 +292,7 @@ footer{
             font-size: 2.3rem;
         }
         .parrafoIndex{
-            line-height: 2rem;
-            font-size: 1.4rem;
-            margin-left: 12rem;
-            margin-right: 12rem;
+            @include fuentesParrafo(2rem,1.4rem,8rem,8rem)
         }
         .imagen1{
             margin-left: 3rem;
@@ -297,6 +301,22 @@ footer{
         .imagen2{
             margin-right: 3rem;
             transform: rotate(-13deg);
+        }
+        .imagenAle{
+            margin-left: 3rem;
+            transform: rotate(13deg);
+        }
+        .imagenKarla{
+            margin-right: 3rem;
+            transform: rotate(-13deg);
+        }
+        .descripcionIntegrante1{
+            width: 30rem;
+            font-size:1.1rem ;
+        }
+        .descripcionIntegrante2{
+            width: 30rem;
+            font-size:1.1rem ;
         }
         .tituloTres{
             font-size: 3rem;

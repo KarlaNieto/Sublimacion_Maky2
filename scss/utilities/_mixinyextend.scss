@@ -1,0 +1,56 @@
+//mixin y extend usados en los html
+@mixin propiedadesFlex{
+    justify-content: center;
+    align-content: center;
+    text-align: center;  
+}
+@mixin fuentesTam($fontsize,$fontweight,$colfondo){
+    font-size: $fontsize;
+    font-weight: $fontweight;
+    background-color: $colfondo;
+}
+@mixin fuentesParrafo($interlineado,$fontsize,$margenizq,$margender){
+    line-height: $interlineado;
+    font-size: $fontsize;
+    margin-left: $margenizq;
+    margin-right: $margender;
+}
+
+
+/*extend en pagina html quienes somos*/
+%extnombres{
+    @include fuentesTam(.8rem,bold ,$color_principal)
+    color:$color_titulo;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Farsan', cursive;
+    margin:2rem;
+}
+%extdescripcion{
+    @include fuentesTam(1rem,bold,$color_fondo);
+    color:$color_principal;
+    text-align: justify;
+    justify-self:center;
+    width: 20rem;
+    height: 6rem;
+    border: 1px solid $color_cuatro;
+    overflow: auto;
+    margin-bottom: 3rem;
+}
+%imgquienes{
+    justify-self:center;
+    transform: scale(.95);
+    margin-top: .8rem;
+}
+
+/*es para las imagenes de KArla y Ale con pantallas mayores a 635 */
+@mixin imagenquienes2{
+    justify-self:center;
+    transform: scale(.95);
+    margin-bottom:1rem ;
+}
+@mixin descint2{
+    width: 18rem;
+    height: 8rem;
+    font-size:1rem ;
+}

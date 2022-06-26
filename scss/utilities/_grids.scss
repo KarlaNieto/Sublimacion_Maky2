@@ -5,8 +5,7 @@
                          "parrafoIndex "
                          "imagen1 "
                          "imagen2";
-    justify-content: center;
-    justify-items: center;
+    @include propiedadesFlex;
 }
 /*GRID QUIENES SOMOS**********************************************************************************************/
 .mainQuienes{
@@ -14,14 +13,13 @@
     grid-template-areas: "hdosIndex "
                          "parrafoIndex "
                          "tituloTres"
-                         "imagen1 "
+                         "imagenAle"
                          "nombre1"
-                         "imagen2"
+                         "descripcionIntegrante1"
+                         "imagenKarla"
                          "nombre2"
-                         "descripcionIntegrante";
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+                         "descripcionIntegrante2";
+    @include propiedadesFlex;
 }
 /*GRID CONTACTANOS*************************************************************************************************/
 .mainContactanos{
@@ -31,9 +29,7 @@
                          "tituloTres"
                          "tablaContactos"
                          "imagen3";
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    @include propiedadesFlex;
 }
 /*GRID PRODUCTOS***************************************************************************************************/
 .contenedorProductos{
@@ -46,9 +42,6 @@
                          "producto11 producto12 "
                          "producto13 producto14 "
                          "producto15 producto16 ";
-
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
- }
+    @include propiedadesFlex;
+}
  /* FIN DE GRIDS***************************************************************************************************/

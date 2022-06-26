@@ -1,3 +1,33 @@
+/*extend en pagina html quienes somos*/
+.nombre1, .nombre2 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: rgba(143, 6, 6, 0.781);
+  color: whitesmoke;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Farsan', cursive;
+  margin: 2rem; }
+
+.descripcionIntegrante1, .descripcionIntegrante2 {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f8e9f1;
+  color: rgba(143, 6, 6, 0.781);
+  text-align: justify;
+  justify-self: center;
+  width: 20rem;
+  height: 6rem;
+  border: 1px solid black;
+  overflow: auto;
+  margin-bottom: 3rem; }
+
+.imagenAle, .imagenKarla {
+  justify-self: center;
+  transform: scale(0.95);
+  margin-top: .8rem; }
+
+/*es para las imagenes de KArla y Ale con pantallas mayores a 635 */
 /*reset*/
 * {
   margin: 0;
@@ -11,7 +41,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
-  background-size: 40rem; }
+  background-size: 38rem; }
 
 /* estilos HEADER */
 header {
@@ -30,22 +60,24 @@ header {
   to {
     transform: rotate(17deg); } }
   header .tituloPrincipal {
-    color: whitesmoke;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    text-transform: uppercase;
     font-size: 1.7rem;
-    font-family: 'Farsan', cursive;
-    font-weight: 1rem;
+    font-weight: bold;
     background-color: rgba(143, 6, 6, 0.781);
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-family: 'Farsan', cursive;
     padding: .3rem; }
   header .menuPrincipal {
     background-color: pink;
     margin-top: .2rem;
     margin-bottom: 1rem; }
     header .menuPrincipal .submenuPrincipal {
-      font-size: .9rem;
-      background-color: color_tres;
+      font-size: 0.9rem;
       font-weight: bold;
+      background-color: white;
       color: #080808;
       padding: .3rem;
       margin: 0.3rem;
@@ -60,31 +92,32 @@ header {
   display: grid;
   grid-template-areas: "hdosIndex " "parrafoIndex " "imagen1 " "imagen2";
   justify-content: center;
-  justify-items: center; }
+  align-content: center;
+  text-align: center; }
 
 /*GRID QUIENES SOMOS**********************************************************************************************/
 .mainQuienes {
   display: grid;
-  grid-template-areas: "hdosIndex " "parrafoIndex " "tituloTres" "imagen1 " "nombre1" "imagen2" "nombre2" "descripcionIntegrante";
+  grid-template-areas: "hdosIndex " "parrafoIndex " "tituloTres" "imagenAle" "nombre1" "descripcionIntegrante1" "imagenKarla" "nombre2" "descripcionIntegrante2";
   justify-content: center;
-  justify-items: center;
-  align-items: center; }
+  align-content: center;
+  text-align: center; }
 
 /*GRID CONTACTANOS*************************************************************************************************/
 .mainContactanos {
   display: grid;
   grid-template-areas: "hdosIndex " "parrafoIndex " "tituloTres" "tablaContactos" "imagen3";
   justify-content: center;
-  justify-items: center;
-  align-items: center; }
+  align-content: center;
+  text-align: center; }
 
 /*GRID PRODUCTOS***************************************************************************************************/
 .contenedorProductos {
   display: grid;
   grid-template-areas: "producto1 producto2 " "producto3 producto4 " "producto5 producto6 " "producto7 producto8 " "producto9 producto10" "producto11 producto12 " "producto13 producto14 " "producto15 producto16 ";
   justify-content: center;
-  justify-items: center;
-  align-items: center; }
+  align-content: center;
+  text-align: center; }
 
 /* FIN DE GRIDS***************************************************************************************************/
 /* asignacion del grid-area en las clases de las imagenes de los productos HTML PRODUCTOS */
@@ -154,52 +187,52 @@ header {
 
 /* pseudoclase hover para los productos */
 .producto1:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto2:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto3:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto4:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto5:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto6:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto7:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto8:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto9:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto10:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto11:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto12:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto13:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto14:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto15:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 .producto16:hover {
-  transform: scale(1.1); }
+  transform: scale(0.9); }
 
 /* estilos de las imagenes de HTML PRODUCTOS */
 .contenedorProductos img {
@@ -220,6 +253,7 @@ header {
 .ListadoPrecios {
   display: flex;
   justify-content: center;
+  align-content: center;
   text-align: center;
   margin-bottom: 2rem; }
 
@@ -228,54 +262,47 @@ section table tr td {
   font-size: 1.5rem; }
 
 .letraTabla {
+  font-size: 1.3rem;
+  font-weight: bold;
   background-color: rgba(143, 6, 6, 0.781);
-  color: whitesmoke;
-  font-size: 1.3rem; }
+  color: whitesmoke; }
 
 /* estilos de la tabla seleccion del HTML PRODUCTOS */
 .seleccionProducto {
-  margin-bottom: 2rem; }
+  margin-bottom: rem;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 4rem; }
 
 /* estilos del primer nombre del HTML QUIENES SOMOS */
 .nombre1 {
-  grid-area: nombre1;
-  color: whitesmoke;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-family: 'Farsan', cursive;
-  font-weight: 1rem;
-  background-color: rgba(143, 6, 6, 0.781);
-  margin: 2rem; }
+  grid-area: nombre1; }
 
 /* estilos del segundo nombre del HTML QUIENES SOMOS */
 .nombre2 {
-  grid-area: nombre2;
-  color: whitesmoke;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-family: 'Farsan', cursive;
-  font-weight: 1rem;
-  background-color: rgba(143, 6, 6, 0.781);
-  margin-bottom: 2rem; }
+  grid-area: nombre2; }
+
+.imagenAle {
+  grid-area: imagenAle; }
+
+.imagenKarla {
+  grid-area: imagenKarla;
+  margin-bottom: 2.3rem; }
+
+/* pseudoclase hover para las imagenes 1 y dos de la pagina HTML y QUIENES SOMOS */
+.imagenAle:hover {
+  transform: scale(1.2); }
+
+.imagenKarla:hover {
+  transform: scale(1.2); }
 
 /* estilos de la descripcion del HTML QUIENES SOMOS  */
-.descripcionIntegrante {
-  grid-area: descripcionIntegrante;
-  color: #a5282f;
-  font-size: 1rem;
-  text-align: justify;
-  background-color: #ceeceb;
-  width: 20rem;
-  height: 6rem;
-  border: 1px solid black;
-  overflow: auto;
-  margin-bottom: 3rem; }
+.descripcionIntegrante1 {
+  grid-area: descripcionIntegrante1; }
 
-/* estilos del nombre en negrita para la descripcion del HTML QUIENES SOMOS*/
-.nombrePropio {
-  font-weight: bold; }
+.descripcionIntegrante2 {
+  grid-area: descripcionIntegrante2; }
 
 /*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/
 .tablaContactos {
@@ -329,33 +356,45 @@ main {
   /* pseudoclase hover para las imagenes 1 y dos de la pagina HTML y QUIENES SOMOS */ }
   main .hdosIndex {
     grid-area: hdosIndex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-content: center;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #f8e9f1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #4b0303;
     text-decoration: underline;
     text-transform: uppercase;
     letter-spacing: .3rem;
     padding: .1rem;
-    margin: 1rem;
-    font-size: 1.5rem; }
+    margin: 1rem; }
   main .parrafoIndex {
     grid-area: parrafoIndex;
-    color: #360202;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.05rem;
+    font-weight: lighter;
+    background-color: #fcdfe5;
     line-height: 1.2rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-left: 2.2rem;
     margin-right: 2.2rem;
+    color: #360202;
+    font-family: 'Signika Negative', sans-serif;
     margin-bottom: 1.5rem; }
   main .tituloTres {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #f8e9f1;
     grid-area: tituloTres;
     color: rgba(143, 6, 6, 0.781);
-    text-align: center;
     text-transform: uppercase;
-    font-size: 2rem;
     font-family: 'Farsan', cursive;
-    font-weight: 1rem;
     margin: 1rem; }
   main .imagen1 {
     grid-area: imagen1;
@@ -377,9 +416,13 @@ main {
 footer {
   /* pseudo clases */ }
   footer .piePagina {
-    color: black;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    font-size: 15px; }
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f8e9f1;
+    color: black; }
   footer .faceMio {
     text-align: center; }
   footer .linkEnlace:hover {
@@ -402,7 +445,7 @@ footer {
   .mainIndex {
     grid-template-areas: "hdosIndex hdosIndex" "parrafoIndex parrafoIndex" "imagen1 imagen2"; }
   .mainQuienes {
-    grid-template-areas: "hdosIndex hdosIndex " "parrafoIndex parrafoIndex " "tituloTres tituloTres" "imagen1 imagen2 " "nombre1 nombre2" "descripcionIntegrante descripcionIntegrante"; }
+    grid-template-areas: "hdosIndex hdosIndex " "parrafoIndex parrafoIndex " "tituloTres tituloTres" "imagenAle imagenKarla " "nombre1 nombre2" "descripcionIntegrante1  descripcionIntegrante2"; }
   .contenedorProductos {
     grid-template-areas: "producto1 producto2 producto3 " "producto4 producto5 producto6 " "producto7 producto8 producto9" "producto10 producto11 producto12 " "producto13 producto14 producto15 " "producto16 producto16 producto16 "; }
   /* estilos del HEADER */
@@ -421,8 +464,8 @@ footer {
       letter-spacing: .2rem;
       font-size: 2rem; }
     main .parrafoIndex {
-      font-size: 1.5rem;
       line-height: 1.8rem;
+      font-size: 1.25rem;
       margin-left: 4rem;
       margin-right: 4rem; }
     main .imagen1 {
@@ -436,20 +479,36 @@ footer {
       transform: scale(0.9);
       margin-bottom: 4rem;
       margin-top: .8rem; }
+    main .imagenAle {
+      justify-self: center;
+      transform: scale(0.95);
+      margin-bottom: 1rem; }
+    main .imagenKarla {
+      justify-self: center;
+      transform: scale(0.95);
+      margin-bottom: 1rem; }
     main .imagen1:hover {
       transform: scale(1.05); }
     main .imagen2:hover {
       transform: scale(1.05); }
+    main .imagenAle:hover {
+      transform: scale(1.1); }
+    main .imagenKarla:hover {
+      transform: scale(1.1); }
     main .nombre1 {
-      justify-self: left;
+      justify-self: center;
       font-size: 1.5rem; }
     main .nombre2 {
-      justify-self: right;
+      justify-self: center;
       font-size: 1.5rem; }
-    main .descripcionIntegrante {
-      width: 35rem;
+    main .descripcionIntegrante1 {
+      width: 18rem;
       height: 8rem;
-      font-size: 1.2rem; }
+      font-size: 1rem; }
+    main .descripcionIntegrante2 {
+      width: 18rem;
+      height: 8rem;
+      font-size: 1rem; }
     main .tituloTres {
       font-size: 2.6rem; }
     main .tablaContactos {
@@ -478,14 +537,26 @@ footer {
   main .parrafoIndex {
     line-height: 2rem;
     font-size: 1.4rem;
-    margin-left: 12rem;
-    margin-right: 12rem; }
+    margin-left: 8rem;
+    margin-right: 8rem; }
   main .imagen1 {
     margin-left: 3rem;
     transform: rotate(13deg); }
   main .imagen2 {
     margin-right: 3rem;
     transform: rotate(-13deg); }
+  main .imagenAle {
+    margin-left: 3rem;
+    transform: rotate(13deg); }
+  main .imagenKarla {
+    margin-right: 3rem;
+    transform: rotate(-13deg); }
+  main .descripcionIntegrante1 {
+    width: 30rem;
+    font-size: 1.1rem; }
+  main .descripcionIntegrante2 {
+    width: 30rem;
+    font-size: 1.1rem; }
   main .tituloTres {
     font-size: 3rem; }
   main .tablaContactos {

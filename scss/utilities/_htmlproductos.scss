@@ -1,116 +1,16 @@
 /* asignacion del grid-area en las clases de las imagenes de los productos HTML PRODUCTOS */
-.producto1{
-    grid-area: producto1;
-    transition: .5s;
-}
-.producto2{
-    grid-area: producto2;
-    transition: .5s;
-}
-.producto3{
-    grid-area: producto3;
-    transition: .5s;
-}
-.producto4{
-    grid-area: producto4;
-    transition: .5s;
-}
- .producto5{
-    grid-area: producto5;
-    transition: .5s;
-}
-.producto6{
-    grid-area: producto6;
-    transition: .5s;
- }
-.producto7{
-    grid-area: producto7;
-    transition: .5s;
- }
-.producto8{
-    grid-area: producto8;
-    transition: .5s;
-}
-.producto9{
-    grid-area: producto9;
-    transition: .5s;
-}
-.producto10{
-    grid-area: producto10;
-    transition: .5s;
-}
-.producto11{
-    grid-area: producto11;
-    transition: .5s;
-}
-.producto12{
-    grid-area: producto12;
-    transition: .5s;
-}
-.producto13{
-    grid-area: producto13;
-    transition: .5s;
-}
-.producto14{
-    grid-area: producto14;
-    transition: .5s;
-}
-.producto15{
-    grid-area: producto15;
-    transition: .5s;
-}
-.producto16{
-    grid-area: producto16;
-    transition: .5s;
+
+@for $num from 1 through 16 {
+    .producto#{$num}{
+        grid-area: producto#{$num};
+        transition: .5s;
+    }
 }
 /* pseudoclase hover para los productos */
-.producto1:hover{
-    transform: scale(1.1);
-}
-.producto2:hover{
-    transform: scale(1.1);
-}
-.producto3:hover{
-    transform: scale(1.1);
-}
-.producto4:hover{
-    transform: scale(1.1);
-}
-.producto5:hover{
-    transform: scale(1.1);
-}
-.producto6:hover{
-    transform: scale(1.1);
-}
-.producto7:hover{
-    transform: scale(1.1);
-}
-.producto8:hover{
-    transform: scale(1.1);
-}
-.producto9:hover{
-    transform: scale(1.1);
-}
-.producto10:hover{
-    transform: scale(1.1);
-}
-.producto11:hover{
-    transform: scale(1.1);
-}
-.producto12:hover{
-    transform: scale(1.1);
-}
-.producto13:hover{
-    transform: scale(1.1);
-}
-.producto14:hover{
-    transform: scale(1.1);
-}
-.producto15:hover{
-    transform: scale(1.1);
-}
-.producto16:hover{
-    transform: scale(1.1);
+@for $num2 from 1 through 16{
+    .producto#{$num2}:hover{
+        transform: scale(.9);
+    }
 }
 
 /* estilos de las imagenes de HTML PRODUCTOS */
@@ -130,9 +30,8 @@
 }
 /*  estilos de la tabla de productos */
 .ListadoPrecios{
-    display:flex;
-    justify-content: center;
-    text-align: center;
+    display: flex;
+    @include propiedadesFlex;
     margin-bottom: 2rem;
 }
 section table tr td{
@@ -140,11 +39,13 @@ section table tr td{
     font-size: 1.5rem;
 }
 .letraTabla{
-    background-color:$color_principal;
+    @include fuentesTam(1.3rem,bold,$color_principal);
     color: $color_titulo;
-    font-size: 1.3rem;
+   
 }
 /* estilos de la tabla seleccion del HTML PRODUCTOS */
 .seleccionProducto{
-    margin-bottom: 2rem;
+    margin-bottom: rem;
+    @include propiedadesFlex;
+    margin-bottom: 4rem;
 }
