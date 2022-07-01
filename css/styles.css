@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*extend en pagina html quienes somos*/
 .nombre1, .nombre2 {
   font-size: 0.8rem;
@@ -36,20 +37,27 @@
 
 /* estilos del BODY, con el logo */
 body {
-  background-color: #f8e9f1;
-  background-image: url(../img/Logogrande.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: 38rem; }
+  background: linear-gradient(whitesmoke, pink); }
 
 /* estilos HEADER */
 header {
+  /*lo siguiente es para pisar el codigo de BS ya que el codigo tiene sus propios estilos y con esto me ayudo a quitarlos*/
   /* estilos del logo para girar ANIMACIONES CAMBIE LA DURACION */
   /* ANIMACIONES DE GIRAR EL LOGO CAMBIE LOS GRADOS */
   /* estilos del TITULO PRINCIPAL EN TODAS LAS HTML */ }
+  header .navbar-collapse {
+    padding: 0;
+    display: flex;
+    justify-content: right; }
+  header .container-fluid {
+    padding: 0;
+    margin-right: 18px; }
+  header .container {
+    padding: 0;
+    margin: 0; }
   header .girar {
-    margin-left: .8rem;
+    width: 4rem;
+    margin-left: 4px;
     animation-name: girar;
     animation-iteration-count: infinite;
     animation-duration: 9s; }
@@ -63,18 +71,17 @@ header {
     justify-content: center;
     align-content: center;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: bold;
     background-color: rgba(143, 6, 6, 0.781);
     color: whitesmoke;
     text-transform: uppercase;
-    font-family: 'Farsan', cursive;
-    padding: .3rem; }
+    font-family: 'Farsan', cursive; }
   header .menuPrincipal {
     background-color: pink;
-    margin-top: .2rem;
-    margin-bottom: 1rem; }
+    padding: 0; }
     header .menuPrincipal .submenuPrincipal {
+      justify-content: right;
       font-size: 0.9rem;
       font-weight: bold;
       background-color: white;
@@ -307,13 +314,14 @@ section table tr td {
 /*  estilo de la tabla donde llena el usuario sus datos del HTML CONTACTANOS*/
 .tablaContactos {
   grid-area: tablaContactos;
-  width: 22rem; }
+  width: 22rem;
+  margin-left: 20%; }
 
 /*  estilo de la imagen donde esta el face,telefono y mail  de nosotros del HTML CONTACTANOS*/
 .imagen3 {
   grid-area: imagen3;
   justify-self: center;
-  transform: scale(0.7);
+  transform: scale(0.5);
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
@@ -321,7 +329,8 @@ section table tr td {
 .formularioCliente {
   margin: .5rem;
   color: rgba(143, 6, 6, 0.781);
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: left; }
 
 /* ESTILOS DEL CARRITO CON BOOTSTRAT
  */
@@ -346,6 +355,11 @@ section table tr td {
   margin-bottom: 1rem;
   width: 10rem;
   height: 10rem; }
+
+/*Esto lo puse para pisar el estilo de BS que utlice en la página carrito*/
+.container {
+  padding: 0;
+  margin: 0; }
 
 /* estilos del main subtitulos principales EN TODOS los HTML */
 main {
@@ -414,17 +428,19 @@ main {
 
 /* estilos del FOOTER es generico en TODOS LOS HTML*/
 footer {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
   /* pseudo clases */ }
   footer .piePagina {
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #f8e9f1;
-    color: black; }
+    background-color: rgba(143, 6, 6, 0.781);
+    color: whitesmoke;
+    font-family: 'Farsan', cursive; }
   footer .faceMio {
-    text-align: center; }
+    transform: scale(1.8);
+    margin: 1rem; }
   footer .linkEnlace:hover {
     background-color: pink;
     font-weight: bold; }
@@ -441,6 +457,13 @@ footer {
 /* para pantallas superiores a 635px uso de queries, pongo el comentario de abajo para que sirva de separador en lo que me acostumbro */
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 @media screen and (min-width: 635px) {
+  body {
+    background-color: #f8e9f1;
+    background-image: url(../img/Logogrande.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 85%;
+    background-size: 25rem; }
   /* grids */
   .mainIndex {
     grid-template-areas: "hdosIndex hdosIndex" "parrafoIndex parrafoIndex" "imagen1 imagen2"; }
@@ -452,10 +475,13 @@ footer {
   header {
     /* estilos del MENU */ }
     header .tituloPrincipal {
-      font-size: 2rem;
-      padding: .8rem; }
+      font-size: 1.8rem; }
     header nav ul li {
       font-size: 1rem; }
+    header .navbar-collapse {
+      padding: 0;
+      display: flex;
+      justify-content: right; }
   /* estilos del MAIN */
   main {
     /* pseudoclase hover para las imagenes 1 y dos de la pagina HTML y QUIENES SOMOS */
@@ -517,6 +543,8 @@ footer {
 /* mayor 1024px-- mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px-- */
 /* uso de media query  */
 @media screen and (min-width: 1024px) {
+  body {
+    background-size: 35rem; }
   /* gridS*/
   .mainContactanos {
     grid-template-areas: "hdosIndex hdosIndex" "parrafoIndex parrafoIndex " "tituloTres tituloTres" "tablaContactos imagen3"; }
@@ -526,11 +554,7 @@ footer {
   header {
     /* estilos del MENU */ }
     header .tituloPrincipal {
-      font-size: 3.5rem;
-      padding: 2rem; }
-    header nav ul {
-      display: flex;
-      justify-content: right; }
+      font-size: 2rem; }
   /* estilos del MAIN */
   main .hdosIndex {
     font-size: 2.3rem; }

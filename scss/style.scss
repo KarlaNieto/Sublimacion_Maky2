@@ -11,19 +11,32 @@
     box-sizing: border-box;
 }
 /* estilos del BODY, con el logo */
+
 body{
-    background-color:$color_fondo;
-    background-image: url(../img/Logogrande.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y:center;
-    background-size: 38rem; 
+    background: linear-gradient( whitesmoke,pink);
 }
+
 /* estilos HEADER */
 header{
+    /*lo siguiente es para pisar el codigo de BS ya que el codigo tiene sus propios estilos y con esto me ayudo a quitarlos*/
+    .navbar-collapse{
+        padding: 0;
+        display: flex;
+        justify-content:right;
+        
+    }
+    .container-fluid{
+        padding: 0;
+        margin-right: 18px;
+    }
+    .container{
+        padding: 0;
+        margin: 0;
+    }
     /* estilos del logo para girar ANIMACIONES CAMBIE LA DURACION */
     .girar{
-        margin-left: .8rem;
+        width: 4rem;
+        margin-left: 4px;
         animation-name: girar;
         animation-iteration-count: infinite;
         animation-duration: 9s;
@@ -37,20 +50,20 @@ header{
             transform: rotate(17deg);
         }
     }
+
     /* estilos del TITULO PRINCIPAL EN TODAS LAS HTML */
     .tituloPrincipal{
         @include propiedadesFlex;
-        @include fuentesTam(1.7rem,bold,$color_principal);         
+        @include fuentesTam(1.4rem,bold,$color_principal);         
         color:$color_titulo;
         text-transform: uppercase;
         font-family: 'Farsan', cursive;
-        padding: .3rem;
     }
     .menuPrincipal{
         background-color:$color_dos;
-        margin-top:.2rem;
-        margin-bottom: 1rem;
+        padding: 0;
         .submenuPrincipal{
+            justify-content: right;
             @include fuentesTam(.9rem,bold,$color_tres); 
             color:$color_cinco;
             padding: .3rem;
@@ -68,6 +81,11 @@ header{
 @import "utilities/htmlquienes";
 @import "utilities/htmlcontactanos";
 @import "utilities/htmlcarrito";
+/*Esto lo puse para pisar el estilo de BS que utlice en la página carrito*/
+.container{
+    padding: 0;
+    margin: 0;
+}
 
 /* estilos del main subtitulos principales EN TODOS los HTML */
 main{
@@ -129,14 +147,18 @@ main{
 
 }
  /* estilos del FOOTER es generico en TODOS LOS HTML*/
-footer{
+
+ footer{
+    @include propiedadesFlex;
     .piePagina{
-        @include propiedadesFlex;
-        @include fuentesTam(1rem,bold,$color_fondo);
-        color:$color_cuatro;
+        @include fuentesTam(1rem,bold,$color_principal);
+        color:$color_titulo;
+        font-family: 'Farsan', cursive;
     }
     .faceMio{
-        text-align: center;
+        transform: scale(1.8);
+        margin: 1rem;
+             
     }
     /* pseudo clases */
     .linkEnlace:hover{
@@ -160,6 +182,15 @@ footer{
 /* para pantallas superiores a 635px uso de queries, pongo el comentario de abajo para que sirva de separador en lo que me acostumbro */
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 @media screen and (min-width:635px) {
+    body{
+        background-color:$color_fondo;
+        background-image: url(../img/Logogrande.png);
+        background-repeat: no-repeat;
+        background-position-x:center;
+        background-position-y:85%;
+        background-size: 25rem; 
+    }
+  
     /* grids */
     .mainIndex{
         grid-template-areas: "hdosIndex hdosIndex"
@@ -185,14 +216,19 @@ footer{
    /* estilos del HEADER */
     header{
         .tituloPrincipal{
-            font-size: 2rem;
-            padding: .8rem;
+            font-size: 1.8rem;
        } 
         /* estilos del MENU */
         nav ul li{
             font-size: 1rem;
         }
-    }
+        .navbar-collapse{
+            padding: 0;
+            display: flex;
+            justify-content:right;
+        }
+     }
+
    /* estilos del MAIN */
     main{
         .hdosIndex{
@@ -261,6 +297,9 @@ footer{
 /* mayor 1024px-- mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px--mayor 1024px-- */
 /* uso de media query  */
 @media screen and (min-width:1024px) {
+    body{
+        background-size: 35rem; 
+    }
     /* gridS*/
     .mainContactanos{
         grid-template-areas: "hdosIndex hdosIndex"
@@ -277,14 +316,9 @@ footer{
     /* estilos del HEADER */
     header{
         .tituloPrincipal{
-            font-size: 3.5rem;
-            padding: 2rem;
+            font-size: 2rem;
         }
         /* estilos del MENU */
-        nav ul{
-            display: flex;
-            justify-content:right;
-        }
     }
      /* estilos del MAIN */
     main{

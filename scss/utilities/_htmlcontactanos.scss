@@ -2,12 +2,13 @@
 .tablaContactos{
     grid-area: tablaContactos;
     width:22rem;
+    margin-left:20%;
 }
 /*  estilo de la imagen donde esta el face,telefono y mail  de nosotros del HTML CONTACTANOS*/
 .imagen3{
     grid-area: imagen3;
     justify-self: center;
-    transform: scale(.7);
+    transform: scale(.5);
     margin-top: 2rem;
     margin-bottom:2rem ;
 }
@@ -15,5 +16,7 @@
 .formularioCliente{
     margin: .5rem;
     color: $color_principal;
-    font-weight: bold;   
+    font-weight: bold;  
+    text-align: left; 
 }
+
