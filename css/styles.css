@@ -12,9 +12,9 @@
 
 .descripcionIntegrante1, .descripcionIntegrante2 {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: lighter;
   background-color: #f8e9f1;
-  color: rgba(143, 6, 6, 0.781);
+  color: black;
   text-align: justify;
   justify-self: center;
   width: 20rem;
@@ -321,7 +321,6 @@ section table tr td {
 .imagen3 {
   grid-area: imagen3;
   justify-self: center;
-  transform: scale(0.5);
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
@@ -356,10 +355,22 @@ section table tr td {
   width: 10rem;
   height: 10rem; }
 
+/* estilo del pie de pagina del html carrito*/
+.piePagina2 {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(143, 6, 6, 0.781);
+  color: whitesmoke;
+  font-family: 'Farsan', cursive; }
+
 /*Esto lo puse para pisar el estilo de BS que utlice en la página carrito*/
 .container {
   padding: 0;
   margin: 0; }
+
+.row {
+  margin: 0;
+  padding: 0; }
 
 /* estilos del main subtitulos principales EN TODOS los HTML */
 main {
@@ -402,7 +413,7 @@ main {
     justify-content: center;
     align-content: center;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: bold;
     background-color: #f8e9f1;
     grid-area: tituloTres;
@@ -505,6 +516,8 @@ footer {
       transform: scale(0.9);
       margin-bottom: 4rem;
       margin-top: .8rem; }
+    main .imagen3 {
+      transform: scale(1.3); }
     main .imagenAle {
       justify-self: center;
       transform: scale(0.95);
@@ -536,7 +549,7 @@ footer {
       height: 8rem;
       font-size: 1rem; }
     main .tituloTres {
-      font-size: 2.6rem; }
+      font-size: 2.2rem; }
     main .tablaContactos {
       width: 30rem; } }
 
@@ -582,7 +595,7 @@ footer {
     width: 30rem;
     font-size: 1.1rem; }
   main .tituloTres {
-    font-size: 3rem; }
+    font-size: 2.5rem; }
   main .tablaContactos {
     margin-left: 6rem;
     width: 35rem; } }

@@ -27,8 +27,8 @@
     margin:2rem;
 }
 %extdescripcion{
-    @include fuentesTam(1rem,bold,$color_fondo);
-    color:$color_principal;
+    @include fuentesTam(1rem,lighter,$color_fondo);
+    color:$color_cuatro;
     text-align: justify;
     justify-self:center;
     width: 20rem;

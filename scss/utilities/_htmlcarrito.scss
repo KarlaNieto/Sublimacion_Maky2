@@ -22,3 +22,9 @@
     width: 10rem;
     height: 10rem;
 }
+/* estilo del pie de pagina del html carrito*/
+.piePagina2{
+    @include fuentesTam(1rem,bold,$color_principal);
+    color:$color_titulo;
+    font-family: 'Farsan', cursive;
+}
